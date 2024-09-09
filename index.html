@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Marice Ziana Otoyi Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+/* Ensure that the container covers the full viewport height and width */
+.tableau-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  padding: 10px; /* Padding around the content */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.tableauPlaceholder {
+  width: 80%; /* Adjust width as needed */
+  max-width: 1200px; /* Limit maximum width */
+  position: relative;
+}
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Marice Ziana</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/backg.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Marice Ziana</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data Scientist  ',
+						'Trainer  ',
+						'Researcher   ',
+						'Mentor'
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Data Consultant</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.youtube.com/@NexTechAcademy" class="btn btn-primary py-3 px-4">YouTube</a> 
+							<a href="https://github.com/nyarotoyi" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Marice Ziana</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Data Consultant</span></p>
+										<p><span class="title-s">Experience: </span> <span> 2 years</span></p>
+										<p><span class="title-s">Address: </span> <span>Kenya</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+								  <p class="title-s">Skills</p>
+								  <ol>
+								      <li>SQL</li>
+								      <li>Python</li>
+								      <li>R</li>
+								      <li>Big Data</li>
+								      <li>Data Visualization Tools</li>
+								      <li>Statistical Analysis</li>
+								      <li>Machine Learning</li>
+								      <li>Data Modeling</li>
+								      <li>Sentiment Analysis</li>
+								      <li>Data Systems, Change Management</li>
+								  </ol>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p> I am a dedicated Data Scientist with over 2 years of experience turning complex data into actionable insights. My expertise spans Python, R, SQL, BI tools, and advanced machine learning techniques, enabling me to solve intricate business challenges with precision.<p>
+
+								<p>I’ve worked across healthcare, finance, and e-commerce industries, building predictive models, performing statistical analyses, and creating clear visualizations to drive data-informed decisions. Passionate about applying data science to real-world problems, I focus on education, public health, and sustainability.<p>
+
+								<p>As a passionate mentor, I founded Nextech Academy, where I train individuals in data and tech skills through hands-on projects and offer data consultancy. I also spend time at The Brave Autocare Garage, repairing cars and managing IT-related tasks.<p>
+
+
+
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Education, Public Health, Business Finance Intelligence &amp; Climate Data</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Business Information Technology</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Swahili, Dholuo, Russian</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Canva, Google Analytics &amp; SEO</span></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/marice-ziana-a51442146//" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Seasoned Data Analyst with 2+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023-Present</span>
+						<h2>Founder, Lead Data Consultant & Trainer</h2>
+						<span class="position">NexTech Academy</span>
+						<p class="mt-4">NexTech Academy is a tech education platform dedicated to equipping individuals with in-demand tech skills and offering consultancy services.. 
+							<ul>
+								<li>Design and deliver comprehensive bootcamps and training programs, focusing on practical data analysis skills such as data cleaning, manipulation, querying, and visualization.</li>
+								<li>Consulted for businesses across various sectors, providing expert advice on data strategy, business intelligence, and creating actionable insights to enhance decision-making processes.</li>
+								<li>Developed automated reporting systems using Power BI and Excel, reducing manual data processing tasks and improving real-time access to key performance metrics for clients.</li>
+								<li>Mentored students and professionals in data science, offering personalized guidance on building data portfolios, career development, and mastering new technologies in an ever-evolving field.</li>
+								<li>Implemented customized data solutions for clients, streamlining processes, improving data accessibility, and enhancing overall business intelligence capabilities.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023</span>
+						<h2>Research Fellow</h2>
+						<span class="position">Edgelands Institute</span>
+						<p class="mt-4">Edgelands Institute facilitates conversations between policymakers, academics, artists, and other experts on digital urban security and the social contract.. 
+							<ul>
+								<li>Contributed to a comprehensive group research project exploring the Unintended Consequences of technology-assisted surveillance in Nairobi. Our study aimed to analyze adverse effects and propose mitigation strategies to empower society.</li>
+								<li>Transformed the research data into insightful content communicated through a podcast, effectively sharing valuable information with a broader audience.</li>
+								<li>Utilized Excel to analyze and visualize the research data collected, aiding in the interpretation of key findings and trends.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2024</span>
+    					<h2>Bachelor of Business Information Technology</h2>
+    					<span class="position">Jomo Kenyatta University of Agriculture and Technology</span>
+    					<p class="mt-4">Grade: </p>
+    				</div>
+    			</div>
+
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1e6Kc7COnyF-ncPe3jrFMINrLmjkljlgp/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are some of the Projects I have worked on.</p>
+          </div>
+        </div>
+        
+			<div class="row d-flex">
+			    <!-- Course Recommendation System -->
+					<div class="col-md-6 d-flex ftco-animate">
+					  <div class="blog-entry justify-content-end" style="min-height: 550px;"> <!-- Increased height from 500px to 550px -->
+					    <!-- Image Section -->
+					    <a href="https://courserecommendationsytem.streamlit.app/" class="block-20 zoom-effect" style="background-image: url('images/pg1.jpg'); height: 300px; background-size: cover;"></a>
+
+					    <!-- Description Section -->
+					    <div class="text mt-3 float-right d-block">
+					      <h3 class="heading">
+					        <a href="https://courserecommendationsytem.streamlit.app">Course Recommendation System</a>
+					      </h3>
+					      <p>
+					        This project focuses on developing a Course Recommendation System utilizing a Random Forest Classifier. The system guides post-secondary students in choosing university courses that align with their academic performance, interests, and RIASEC profiles.
+					      </p>
+					    </div>
+
+					    <!-- Button Section -->
+				      <div class="d-flex justify-content-start" style="margin-top: 180px;">
+							  <a href="https://github.com/nyarotoyi/Course-recommendation-system" class="btn btn-primary mt-2" target="_blank" style="width: 180px !important; 
+			            height: 40px !important; 
+			            margin-right: 100px; 
+			            padding: 10px !important; 
+			            flex-shrink: 0;
+			            justify-content: center; 
+            			flex-grow: 0;
+            			margin-right: 100px;">
+							    View on GitHub
+							  </a>
+							  <a href="https://courserecommendationsytem.streamlit.app/" 
+							     class="btn btn-success mt-2 ml-2" 
+							     target="_blank" 
+							     style="width: 180px !important; 
+							            height: 50px !important; 
+							            flex-shrink: 0;
+							            flex-grow: 0;
+							            display: flex; 
+							            justify-content: center; 
+							            align-items: center;">
+							    Try it on Streamlit
+							  </a>
+							</div>
+					  </div>
+ 				  </div>
+
+			  <!-- LLIN Distribution Analysis -->
+			  <div class="col-md-6 d-flex ftco-animate">
+			    <div class="blog-entry justify-content-end" style="min-height: 500px;"> <!-- Increased height -->
+			      <!-- Image Section -->
+			      <a href="https://github.com/nyarotoyi/SQL-Portfolio/tree/main/llin_%20distribution_analysis" class="block-20 zoom-effect" style="background-image: url('images/lln.jpg'); height: 300px; background-size: cover;"></a>
+
+			      <!-- Description Section -->
+			      <div class="text mt-3 float-right d-block">
+			        <h3 class="heading">
+			          <a href="https://github.com/nyarotoyi/SQL-Portfolio/tree/main/llin_%20distribution_analysis">LLIN Distribution Analysis</a>
+			        </h3>
+			        <p>
+			          This project uses SQL in MySQL to analyze the distribution of Long-Lasting Insecticidal Nets (LLINs) across various locations in multiple African countries, providing insights that could inform future distribution strategies.
+			        </p>
+			      </div>
+
+			      <!-- Button Section -->
+			      <a href="https://github.com/nyarotoyi/SQL-Portfolio/tree/main/llin_%20distribution_analysis" class="btn btn-primary mt-2" target="_blank" style ="margin-left: 200px !important;">
+			        View on GitHub
+			      </a>
+			    </div>
+			  </div>
+			</div>
+
+		
+		<div class="row d-flex justify-content-center ">  
+		  <!-- Car Price Prediction Model -->
+		  <div class="col-md-6 d-flex ftco-animate">
+		    <div class="blog-entry justify-content-end" style="min-height: 500px;"> <!-- Increased height -->
+		      <!-- Image Section -->
+		      <a href="https://github.com/nyarotoyi/simple-linear-regression-car-price-prediction-model" class="block-20 zoom-effect" style="background-image: url('images/cppm.jpg'); height: 300px; background-size: cover;"></a>
+
+		      <!-- Description Section -->
+		      <div class="text mt-3 float-right d-block">
+		        <h3 class="heading">
+		          <a href="https://github.com/nyarotoyi/simple-linear-regression-car-price-prediction-model">Car Price Prediction Model</a>
+		        </h3>
+		        <p>Utilized Linear Regression model to predict the prices of cars based on various features such as make, model, year, mileage, and more. This machine learning model provides estimates of car prices to assist buyers, sellers, and dealerships in making informed decisions.</p>
+		      </div>
+
+		      <!-- Button Section -->
+		      <div class="d-flex justify-content-start"style="margin-top: 230px;">
+		        <a href="https://github.com/nyarotoyi/simple-linear-regression-car-price-prediction-model" class="btn btn-primary mt-2" target="_blank" style="width: 180px !important; 
+							            height: 50px !important; 
+							            flex-shrink: 0;
+							            flex-grow: 0;
+							            display: flex; 
+							            justify-content: center; 
+							            align-items: center;
+							            margin-left: 180px !important;"> 
+
+		          View on GitHub
+		        </a>
+		      </div>
+		    </div>
+		  </div>
+
+		  <!-- IBM SPSS Workflow for PhD in Public Health -->
+		  <div class="col-md-6 d-flex ftco-animate">
+		    <div class="blog-entry justify-content-end" style="min-height: 500px;"> <!-- Increased height -->
+		      <!-- Image Section -->
+		      <a href="https://github.com/nyarotoyi/Statistical-Analysis/blob/main/README.md" class="block-20 zoom-effect" style="background-image: url('images/spss.jpg'); height: 300px; background-size: cover;"></a>
+
+		      <!-- Description Section -->
+		      <div class="text mt-3 float-right d-block">
+		        <h3 class="heading">
+		          <a href="https://github.com/nyarotoyi/Statistical-Analysis/blob/main/README.md">IBM SPSS Workflow for PhD in Public Health (ODDS RATIO)</a>
+		        </h3>
+		        <p>We are calculating the odds of contracting various diseases such as pneumonia, flu, and others based on demographic factors like age, income level, access to health information, and working conditions. I use SPSS for calculating odds ratios and organize the results in an Excel file.</p>
+		      </div>
+
+		      <!-- Button Section -->
+		      <div class="d-flex justify-content-start"style="margin-top: 230px;">
+		        <a href="https://github.com/nyarotoyi/Statistical-Analysis/blob/main/README.md" class="btn btn-primary mt-2" target="_blank" style="width: 180px !important; 
+							            height: 50px !important; 
+							            flex-shrink: 0;
+							            flex-grow: 0;
+							            display: flex; 
+							            justify-content: center; 
+							            align-items: center;
+							            margin-left: 180px !important;"> <
+		          View on GitHub
+		        </a>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+    </section>
+
+    <section>
+
+    	<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: auto; margin: 0; padding: 5px; box-sizing: border-box;">
+			  <h1 style="margin-bottom: 20px;">Mpox Spread Analysis Dashboard</h1>
+			  <p style="max-width: 1000px;">
+			    In Tableau project, I analyzed the trends and patterns of the mpox outbreak to gahter insights that could assist the Organisations responding to the Outbreak in identifying areas requiring critical intervention and developing a strategic response plan. Through detailed visualizations and comprehensive data analysis, this dashboard aims to provide actionable insights into the spread of mpox, helping to prioritize resources and responses in the most affected regions. By leveraging this analysis, stakeholders can enhance their understanding of the outbreak dynamics and implement more effective measures to control and prevent further spread.
+			  </p>
+			</div>
+
+    	<div class="tableau-container">
+			  <div class="tableauPlaceholder" id='viz1725822088229' style='position: relative;'>
+			    <noscript>
+			      <a href='#'>
+			        <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;6P&#47;6P9XKS8K7&#47;1_rss.png' style='border: none' />
+			      </a>
+			    </noscript>
+			    <object class='tableauViz' style='display:none;'>
+			      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+			      <param name='embed_code_version' value='3' /> 
+			      <param name='path' value='shared&#47;6P9XKS8K7' /> 
+			      <param name='toolbar' value='yes' />
+			      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;6P&#47;6P9XKS8K7&#47;1.png' /> 
+			      <param name='animate_transition' value='yes' />
+			      <param name='display_static_image' value='yes' />
+			      <param name='display_spinner' value='yes' />
+			      <param name='display_overlay' value='yes' />
+			      <param name='display_count' value='yes' />
+			      <param name='language' value='en-US' />
+			    </object>
+			  </div>
+			</div>
+
+			<script type='text/javascript'>
+			  var divElement = document.getElementById('viz1725822088229');
+			  var vizElement = divElement.getElementsByTagName('object')[0];
+			  if ( divElement.offsetWidth > 800 ) { 
+			    vizElement.style.minWidth='1100px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='600px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';
+			  } else if ( divElement.offsetWidth > 500 ) { 
+			    vizElement.style.minWidth='1100px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='600px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';
+			  } else { 
+			    vizElement.style.width='100%';vizElement.style.minHeight='1600px';vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';
+			  }                    
+			  var scriptElement = document.createElement('script');
+			  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+			  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+			</script>
+
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="15">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="50">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/nyarotoyi" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Kenya</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://254705889141">+254705889141</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:zianaodero@gmail.com">zianaodero@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1e6Kc7COnyF-ncPe3jrFMINrLmjkljlgp/view?usp=sharing">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/K41GfSQV5Jm8EWvL9" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@NexTechAcademy"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://https://www.linkedin.com/in/marice-ziana-a51442146/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://x.com/ZianaOtoyi"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=100073564817139"><span class="icon-facebook"></span></a></li>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
